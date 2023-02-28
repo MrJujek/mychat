@@ -18,6 +18,7 @@
     "dependencies": {
         "fs": "^0.0.1-security",
         "node": "^19.6.1",
+        "socket.io": "^4.6.1",
         "tracer": "^1.0.2"
     }
 }

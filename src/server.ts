@@ -21,6 +21,19 @@ const server = http.createServer((req, res) => {
     }
 })
 
+
+const { Server } = require("socket.io");
+const socketio = new Server(server);
+
+socketio.on('connection', (client: any) => {
+    console.log("ASDASDASD");
+
+    console.log(client);
+
+    console.log("klient się podłączył z id = ", client.id)
+    // client.id - unikalna nazwa klienta generowana przez socket.io
+});
+
 function getExtensionType(extension: string) {
     switch (extension) {
         case "css":
