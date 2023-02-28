@@ -1,0 +1,23 @@
+{
+    "name": "repo",
+    "version": "1.0.0",
+    "main": "./build/server.js",
+    "repository": "https://github.com/",
+    "author": "jdworzycki",
+    "license": "MIT",
+    "scripts": {
+        "build": "npx tsc",
+        "start": "node build/server.js",
+        "dev": "concurrently \"npx tsc --watch\" \"nodemon -q --ignore ./files/ build/server.js\""
+    },
+    "devDependencies": {
+        "@types/node": "^18.14.2",
+        "concurrently": "^7.6.0",
+        "nodemon": "^2.0.20"
+    },
+    "dependencies": {
+        "fs": "^0.0.1-security",
+        "node": "^19.6.1",
+        "tracer": "^1.0.2"
+    }
+}
